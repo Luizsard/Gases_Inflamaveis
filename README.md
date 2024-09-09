@@ -17,7 +17,7 @@ Este projeto demonstra como utilizar o sensor MQ-9 para monitorar gases e integr
    - Conecte o buzzer ao pino digital D2.
    - Conecte o LED ao pino digital D1.
 
-3. Configuração do ThingSpeak
+3. **Configuração do ThingSpeak**
 Criar uma Conta e Canal:
 
 Acesse ThingSpeak e crie uma conta.
@@ -26,7 +26,7 @@ Configurar Campos:
 
 Configure um campo para receber os dados do sensor.
 
-4. Integração com Google Sheets
+4. **Integração com Google Sheets**
 Publicar a Planilha:
 
 No Google Sheets, vá para Arquivo > Publicar na web.
@@ -35,7 +35,7 @@ Criar uma Planilha para Armazenar Dados:
 
 Configure a planilha para receber dados do ThingSpeak.
 
-5. Google Sites
+5. **Google Sites**
 No Google sites, apenas inseri um gráfico que é feito no proprio Google Sheets
 
 Conclusão
