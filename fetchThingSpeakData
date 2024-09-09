@@ -1,0 +1,18 @@
+Função do Apps Script que realiza a leitura e inserção da API de leitura do ThinkSpeak
+
+function fetchThingSpeakData() {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet(); // Obtém a planilha ativa
+  var url = "URL da API de Leitura";
+
+  var response = UrlFetchApp.fetch(url);  // Faz a requisição HTTP GET
+  var json = JSON.parse(response.getContentText());  // Converte a resposta em JSON
+
+  var feed = json.feeds[0];  // Obtém o último dado registrado
+  var timestamp = feed.created_at;  // Timestamp da leitura
+  var value = feed.field1;  // Valor da leitura
+
+  // Armazena os dados na próxima linha vazia
+  sheet.appendRow([new Date(timestamp), value]);
+
+  Logger.log("Dados armazenados com sucesso: " + timestamp + " - " + value);
+}
